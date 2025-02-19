@@ -3,7 +3,7 @@ import pandas as pd
 import json
 import xml.etree.ElementTree as ET
 
-INPUT_DIR = "tsv"  # Folder containing TSV files
+INPUT_DIR = "raw_files"  # Folder containing TSV files
 
 # Ensure top-level output directories exist
 for folder in ["json", "csv", "tsv", "xml"]:
