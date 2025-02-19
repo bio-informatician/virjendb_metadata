@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 INPUT_DIR = "tsv"  # Folder containing TSV files
 
 # Ensure top-level output directories exist
-for folder in ["json", "csv", "tsv_files", "xml"]:
+for folder in ["json", "csv", "tsv", "xml"]:
     os.makedirs(folder, exist_ok=True)
 
 
