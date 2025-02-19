@@ -3,7 +3,7 @@ name: Convert TSV Files
 on:
   push:
     branches:
-      - main  # Trigger the action on a push to the `main` branch
+      - main  # Runs the workflow when pushing to `main`
 
 jobs:
   convert:
@@ -24,29 +24,37 @@ jobs:
       - name: Install dependencies
         run: pip install pandas
 
-      # Step 4: Run the conversion script (your Python script that converts TSV to JSON, CSV, etc.)
+      # Step 4: Run the conversion script
       - name: Convert TSV to JSON, CSV, TSV, and XML
         run: python conversion.py
 
-      # Step 5: Commit only the new files (folders and converted files) to a new branch
+      # Step 5: Move newly created files to a safe location before cleanup
+      - name: Preserve new files
+        run: |
+          mkdir -p converted_files
+          mv json csv xml tsv converted_files/  # Adjust folder names as needed
+
+      # Step 6: Create a new branch and remove all existing files
       - name: Commit converted files
         env:
-          OUTPUT_BRANCH: "v0.3"  # Set your preferred branch name
+          OUTPUT_BRANCH: "v0.3"  # Define your branch name
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Create and switch to the new branch
-          git checkout -b "$OUTPUT_BRANCH"
+          git checkout --orphan "$OUTPUT_BRANCH"
           
-          # Clean the repository, removing all existing files except the newly created folders
-          git rm -rf .  # Remove all files from the repository
+          # Remove all files in the repo except the converted files
+          git rm -rf .
           
-          # Re-add the newly created directories and files
-          git add json/ csv/ tsv/ xml/
+          # Restore only the new folders
+          mv converted_files/* .
+          rmdir converted_files  # Cleanup empty directory
           
-          # Commit the changes
+          # Ensure the repository contains only the new files
+          git add json/ csv/ xml/ tsv/
+          
+          # Commit and push
           git commit -m "Auto-converted TSV files"
-          
-          # Push the new branch to the repository (force push to overwrite the branch)
           git push origin "$OUTPUT_BRANCH" --force
