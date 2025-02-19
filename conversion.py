@@ -4,7 +4,6 @@ import json
 import xml.etree.ElementTree as ET
 
 INPUT_DIR = "tsv"  # Folder containing TSV files
-BRANCH_NAME = os.getenv("OUTPUT_BRANCH", "converted-files")  # Configurable branch name
 
 # Ensure top-level output directories exist
 for folder in ["json", "csv", "tsv_files", "xml"]:
@@ -82,6 +81,6 @@ for file in os.listdir(INPUT_DIR):
 
         # Save CSV and TSV
         df.to_csv(os.path.join("csv", f"{base_name}.csv"), index=False)
-        df.to_csv(os.path.join("tsv_files", f"{base_name}.tsv"), sep='\t', index=False)
+        df.to_csv(os.path.join("tsv", f"{base_name}.tsv"), sep='\t', index=False)
 
 print("Conversion complete!")
