@@ -1,0 +1,126 @@
+modul	submodul	privateName	publicName	description
+Virus	Core			
+Virus	Taxonomy	Virus_Taxonomy_Influenza_Virus_Type	Virus Influenza Virus Type	INFLUENZA: Influenza virus classification
+Identifiers	Core			
+Identifiers	INSDC			
+Source	Core			
+Source	Environment			
+Source	Host			
+Source	Clinical	Source_Clinical_Influenza_Test_Method	Source Influenza Test Method	Method used to assess if a sample if flu positive/negative. When multiple once were used they are seperated by semicolon
+Source	Clinical	Source_Clinical_Influenza_Test_Result	Source Influenza Test Result	Result of the given methods. Positive(P) or Negative(N). For multiple test the results are delimited by semicolon, e.g. P; P
+Source	Clinical	Source_Clinical_Other_Pathogens_Test_Result	Source Other Pathogens Test Result	The test result for other tested pathogens given as described by influenza test result
+Source	Clinical	Source_Clinical_Other_Pathogens_Tested	Source Other Pathogens Tested	Was the sample tested for other pathogens? Insert the pathogenic organisms using semicolon as a delimiter, e.g. Newcastle. “None” is also valid
+Source	Lab			
+Sequence	Core			
+Sequence	Assembly			
+Sequence	Sequencing			
+Submission	Core			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+Virus				
