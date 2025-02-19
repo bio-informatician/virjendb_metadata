@@ -1,54 +1,52 @@
-name: Convert Files and Create New Branch
+name: Convert TSV Files
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the action on a push to the `main` branch
 
 jobs:
-  convert_and_create_branch:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v3
-        with:
-          ref: main
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python environment
+      # Step 2: Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.10'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pandas  # Add any other dependencies you need
+        run: pip install pandas
 
-      - name: Run conversion script
-        run: |
-          python conversion.py  # Ensure this is the script you want to run
+      # Step 4: Run the conversion script (your Python script that converts TSV to JSON, CSV, etc.)
+      - name: Convert TSV to JSON, CSV, TSV, and XML
+        run: python conversion.py
 
-      - name: Create new branch for output
+      # Step 5: Commit only the new files (folders and converted files) to a new branch
+      - name: Commit converted files
+        env:
+          OUTPUT_BRANCH: "v0.3"  # Set your preferred branch name
         run: |
-          NEW_BRANCH="v0.3"  # This is the new branch name
-          git checkout --orphan $NEW_BRANCH  # Create a new branch without any history
-          git reset --hard  # Reset working tree to remove all files
-
-      - name: Create required folders and README
-        run: |
-          # Create required folders
-          mkdir json csv tsv xml
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Create a README file
-          echo "# Converted Files" > README.md
-          echo "This branch contains the converted files (JSON, CSV, TSV, XML)." >> README.md
-
-      - name: Add new files to git
-        run: |
-          git add .
-          git commit -m "Add converted files and folders"
-
-      - name: Push new branch to GitHub
-        run: |
-          git push origin $NEW_BRANCH  # Push the newly created branch with the folders and README
+          # Create and switch to the new branch
+          git checkout -b "$OUTPUT_BRANCH"
+          
+          # Clean the repository, removing all existing files except the newly created folders
+          git rm -rf .  # Remove all files from the repository
+          
+          # Re-add the newly created directories and files
+          git add json/ csv/ tsv/ xml/
+          
+          # Commit the changes
+          git commit -m "Auto-converted TSV files"
+          
+          # Push the new branch to the repository (force push to overwrite the branch)
+          git push origin "$OUTPUT_BRANCH" --force
