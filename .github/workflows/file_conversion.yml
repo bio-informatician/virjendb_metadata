@@ -33,6 +33,7 @@ jobs:
         run: |
           mkdir -p converted_files
           mv json csv xml tsv converted_files/  # Adjust folder names as needed
+          cp README.md converted_files/  # Keep README.md
 
       # Step 6: Create a new branch and remove all existing files
       - name: Commit converted files
