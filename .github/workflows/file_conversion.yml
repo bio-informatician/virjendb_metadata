@@ -26,7 +26,7 @@ jobs:
 
       # Step 4: Run the conversion script
       - name: Convert TSV to JSON, CSV, TSV, and XML
-        run: python conversion.py
+        run: python create_output_files.py
 
       # Step 5: Move newly created files to a safe location before cleanup
       - name: Preserve new files
