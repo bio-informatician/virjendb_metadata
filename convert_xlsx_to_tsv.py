@@ -22,7 +22,7 @@ for wanted_file in WANTED_FILES:
     print(wanted_file)
     if wanted_file["sheet_name"] in xlsx.sheet_names:
         df = pd.read_excel(xlsx, sheet_name=wanted_file["sheet_name"], usecols=lambda x: x in wanted_file["cols"], skiprows=3)
-        tsv_path = os.path.join(OUTPUT_DIR, f"{wanted_file["filename"]}.tsv")
+        tsv_path = os.path.join(OUTPUT_DIR, f"{wanted_file['filename']}.tsv")
         df.to_csv(tsv_path, sep="\t", index=False)
     else: 
         print("No such sheet: ", wanted_file.sheet_name)
