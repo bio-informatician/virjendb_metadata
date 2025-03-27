@@ -10,6 +10,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 WANTED_FILES = [
     {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description",	"vjdbv0.3_fields_type",	"vjdbv0.3_privacy"], "filename": "VJDBCore"},
     {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_tags"], "filename": "Tags"},
+    {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description", "vjdbv0.3_tags", "vjdbv0.3_privacy"], "filename": "Frontend"},
     ]
 
 
