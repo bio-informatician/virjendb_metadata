@@ -1,12 +1,11 @@
-
 name: Convert TSV into Publication Files
 
 on:
   push:
     branches:
-      - main # Runs the workflow when pushing to `main`
+      - main
     paths:
-      - "/raw_files" # Runs only when metadata.xlsx is updated
+      - "raw_files/**"
 
 jobs:
   convert:
