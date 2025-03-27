@@ -25,6 +25,10 @@ jobs:
       - name: Install dependencies
         run: pip install pandas
         run: pip install openpyxl
+      
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: pip install openpyxl
 
       # Step 4: Run the TSV conversion script
       - name: Convert XLSX to TSV
