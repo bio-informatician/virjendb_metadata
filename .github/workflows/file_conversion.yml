@@ -24,8 +24,7 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: pip install pandas
-        run: pip install openpyxl
-      
+
       # Step 3: Install dependencies
       - name: Install dependencies
         run: pip install openpyxl
