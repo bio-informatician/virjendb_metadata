@@ -1,11 +1,17 @@
 name: Convert TSV into Publication Files
 
 on:
-  push:
-    branches:
-      - main
-    # paths:
-    #   - "raw_files/**"
+  workflow_run:
+    workflows: ["Convert TSV Files"] # Name of the first workflow
+    types:
+      - completed
+
+# on:
+#   push:
+#     branches:
+#       - main
+#     # paths:
+#     #   - "raw_files/**"
 
 jobs:
   convert:
