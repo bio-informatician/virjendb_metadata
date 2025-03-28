@@ -1,5 +1,5 @@
 vjdbv0.3_field_id	vjdbv0.3_name	vjdbv0.3_description	vjdbv0.3_fields_type	vjdbv0.3_privacy
-insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	keyword	public
+insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	keyword	publice
 assembly_accession_id	Assembly Accession ID	Assembly ID of the sequence (INSDC)	keyword	public
 bioproject_accession_id	Bioproject Accession ID	References the BioProject Accession (ID) (INSDC)	keyword	public
 biosample_accession_id	Biosample Accession ID	References the BioSample Accession (ID) (INSDC)	keyword	public
