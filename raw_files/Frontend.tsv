@@ -1,5 +1,5 @@
 vjdbv0.3_field_id	vjdbv0.3_name	vjdbv0.3_description	vjdbv0.3_privacy	vjdbv0.3_tags
-insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	publice	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"
+insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	public	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"
 assembly_accession_id	Assembly Accession ID	Assembly ID of the sequence (INSDC)	public	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Analysis"", ""Identifiers""]"
 bioproject_accession_id	Bioproject Accession ID	References the BioProject Accession (ID) (INSDC)	public	"[""ENA"", ""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Study"", ""Identifiers""]"
 biosample_accession_id	Biosample Accession ID	References the BioSample Accession (ID) (INSDC)	public	"[""ENA"", ""MIGS-VI"", ""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Sample"", ""Identifiers""]"
