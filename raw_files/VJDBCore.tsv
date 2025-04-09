@@ -1,5 +1,5 @@
 vjdbv0.3_field_id	vjdbv0.3_name	vjdbv0.3_description	vjdbv0.3_fields_type	vjdbv0.3_privacy
-insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	keyword	publice
+insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	keyword	public
 assembly_accession_id	Assembly Accession ID	Assembly ID of the sequence (INSDC)	keyword	public
 bioproject_accession_id	Bioproject Accession ID	References the BioProject Accession (ID) (INSDC)	keyword	public
 biosample_accession_id	Biosample Accession ID	References the BioSample Accession (ID) (INSDC)	keyword	public
@@ -104,3 +104,51 @@ submitter_region	Submitter Region	Country or location of the organization of the
 taxon_lineage_ids	Taxon Lineage IDs	BVBRC NCBI TaxIDs of the lineage		public
 virjen_id	VirJen ID	VirJenDB sequence ID		public
 virus_id	Virus ID	Unique ID given by the investigator as strain might not be unique		internal
+study_alias	Study Alias	(Mandatory) Unique identifier for a study. this is used to link experiments to the study.		private
+experiment_alias	Experiment Alias	(Mandatory) Unique identifier for each experiment. this is used to link runs to experiments.		private
+run_alias	Run Alias	(Mandatory) Unique identifier for each run.		private
+sample_alias	Sample Alias	(Mandatory) Unique identifier for each sample.		private
+antiviral treatment	Antiviral Treatment	(Optional) Antiviral treatment used for this subject, such as zanamavir oseltamivir, amantadine. example: rimantadine		internal
+antiviral treatment dosage	Antiviral Treatment Dosage	(Optional) Dosage of the treatment taken by the subject. example: 0.05 mg		internal
+antiviral treatment duration	Antiviral Treatment Duration	(Optional) Duration of antiviral treatment after onset of clinical symptoms in days.example: 5		internal
+antiviral treatment initiation	Antiviral Treatment Initiation	(Optional) Initiation of antiviral treatment after onset of clinical symptoms in days. example: 2.5		internal
+experiment_alias	Experiment Alias	(Mandatory) From_experiment_metadata		internal
+file_format	File Format	(Mandatory) The run data file model.		private
+file_name	File Name	(Mandatory) The name or relative pathname of a run data file.		private
+gravidity	Gravidity	(Optional) Whether or not the subject is gravid. if so, report date due or date post-conception and specify which of these two dates is being reported.		internal
+hospitalisation	Hospitalisation	(Optional) Was the subject confined to a hospital as a result of virus infection or problems occurring secondary to virus infection?		internal
+host description	Host Description	(Optional) Other descriptive information relating to the host.		internal
+illness duration	Illness Duration	(Optional) The number of days the illness lasted. example: 4		internal
+illness onset date	Illness Onset Date	(Optional) Date the subject showed an onset of symptoms. format: yyyy-mm-dd. example: 2011-10-20		internal
+illness symptoms	Illness Symptoms	(Optional) The symptoms that have been reported in relation to the illness, such as cough, diarrhea, fever, headache, malaise, myalgia, nausea, runny_nose, shortness_of_breath, sore_throat. if multiple exposures are applicable, please state them separated by semicolon.		internal
+influenza strain unique number	Influenza Strain Unique Number	(Optional) Unique number of the strain which is reported as a part of the influenza strain name, such as a/chicken/fujian/411/2002(hxn1). format: integer number, example: 411		internal
+influenza vaccination date	Influenza Vaccination Date	(Optional) Date that the influenza vaccination was administered to the subject over the past year. format: yyyy-mm-dd. example: 2007-05-12		internal
+influenza vaccination type	Influenza Vaccination Type	(Optional) Influenza vaccinations that have been administered to the subject over the last year. example: 2009 h1n1 flumist		internal
+influenza-like illness at the time of sample collection	Influenza-like Illness at the Time of Sample Collection	(Optional) Is the subject at the time of sample collection considered to have influenza like illness?		internal
+inoculation dose	Inoculation Dose	(Optional) Dose used for the inoculoation experiment.		internal
+inoculation route	Inoculation Route	(Optional) Brief description of the protocol inoculation route.		internal
+inoculation stock availability	Inoculation Stock Availability	(Optional) Is the virus stock used for the inoculation available?		internal
+lineage:swl (required for H1N1 viruses)	Lineage: SWL (Required for H1N1 Viruses)	(Optional) Does the h1n1 influenza virus originate from a swine-like outbreak (as opposed to a seasonal flu)?		internal
+meaning of cut off value	Meaning of Cut Off Value	(Optional) Description helping to explain what the cut off value means.		internal
+new_study_type	New Study Type	(Optional) Optional if 'study_type' is not 'other'. to propose a new term, select other and enter a new study type.		private
+number of inoculated individuals	Number of Inoculated Individuals	(Optional) Number of host individuals inoculated for the experiment.		internal
+personal protective equipment	Personal Protective Equipment	(Optional) Use of personal protective equipment, such as gloves, gowns, during any type of exposure. example: mask		internal
+sample capture status	Sample Capture Status	(Recommended) Reason for the sample collection.		internal
+sample storage conditions	Sample Storage Conditions	(Optional) Conditions at which sample was stored, usually storage temperature, duration and location. in soil context: explain how and for how long the soil sample was stored before dna extraction (fresh/frozen/other).		internal
+sample_alias	Sample Alias	(Mandatory) (from sample metadata)		internal
+sample_description	Sample Description	(Optional) Free-form text describing the sample, its origin, and its method of isolation.		internal
+source of vaccination information	Source of Vaccination Information	(Optional) Designation of information related to vaccination history as self reported or documented.		internal
+strain	Strain	(Optional) Name of the strain from which the sample was obtained.		internal
+study_abstract	Study Abstract	(Optional) Briefly describes the goals, purpose, and scope of the study.  this need not be listed if it can be inherited from a referenced publication.		internal
+study_alias	Study Alias	(Mandatory) Identifies the parent study. (from study metadata)		private
+study_type	Study Type	(Mandatory) The study_type presents a controlled vocabulary for expressing the overall purpose of the study.		private
+subject exposure	Subject Exposure	(Optional) Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. if multiple exposures are applicable, please state them separated by semicolon. example: poultry; wild bird		internal
+subject exposure duration	Subject Exposure Duration	(Optional) Duration of the exposure of the subject to an infected human or animal. if multiple exposures are applicable, please state their duration in the same order in which you reported the exposure in the field 'subject exposure'. example: 1 day; 0.33 days (Units: year)		internal
+study_title	Study Title	(Mandatory) Title of the study as would be used in a publication.		internal
+experiment_title	Experiment Title	(Mandatory) Short text that can be used to call out experiment records in searches or in displays. this element is technically optional but should be used for all new records.		internal
+sample_title	Sample Title	(Mandatory) Short text that can be used to call out sample records in search results or in displays.		internal
+type exposure	Type Exposure	(Optional) Setting within which the subject is exposed to animals, such as farm, slaughterhouse, food preparation. if multiple exposures are applicable, please state their type in the same order in which you reported the exposure in the field 'subject exposure'. example: backyard flock; confined animal feeding operation		internal
+vaccine dosage	Vaccine Dosage	(Optional) Dosage of the vaccine taken by the subject. example: 0.05 ml		internal
+vaccine lot number	Vaccine Lot Number	(Optional) Lot number of the vaccine.		internal
+vaccine manufacturer	Vaccine Manufacturer	(Optional) Manufacturer of the vaccine.		internal
+WHO/OIE/FAO clade (required for HPAI H5N1 viruses)	WHO/OIE/FAO Clade (Required for HPAI H5N1 Viruses)	(Optional) Who/oie/fao clade should be included for highly pathogenic h5n1 viruses. example: 2.2		internal

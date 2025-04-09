@@ -1,6 +1,6 @@
 {
     "VJDBCore": {
-        "num_fields": 102,
+        "num_fields": 150,
         "unique_tags": [
             "NCBI Virus",
             "BV-BRC",
@@ -26,7 +26,8 @@
             "ICTV Taxonomy",
             "ENA Experiment",
             "Sequencing",
-            "Source"
+            "Source",
+            "ENA Run"
         ],
         "tag_counts": {
             "NCBI Virus": 29,
@@ -35,12 +36,12 @@
             "Identifiers": 11,
             "ENA Analysis": 7,
             "ENA": 55,
-            "ENA Study": 1,
+            "ENA Study": 6,
             "MIGS-VI": 23,
-            "ENA Sample": 31,
+            "ENA Sample": 66,
             "RKI": 10,
-            "ENA ERC32": 38,
-            "ENA ERC33": 35,
+            "ENA ERC32": 86,
+            "ENA ERC33": 63,
             "Sample": 56,
             "Collection": 10,
             "Virus": 12,
@@ -51,9 +52,10 @@
             "Analysis": 23,
             "Clinical": 15,
             "ICTV Taxonomy": 1,
-            "ENA Experiment": 10,
+            "ENA Experiment": 14,
             "Sequencing": 11,
-            "Source": 1
+            "Source": 1,
+            "ENA Run": 4
         }
     }
 }
