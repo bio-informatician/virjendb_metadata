@@ -11,8 +11,7 @@ WANTED_FILES = [
     {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description",	"vjdbv0.3_fields_type",	"vjdbv0.3_privacy"], "filename": "VJDBCore"},
     {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_tags"], "filename": "Tags"},
     {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description", "vjdbv0.3_tags", "vjdbv0.3_privacy"], "filename": "Frontend"},
-    {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description", "vjdbv0.3_tags", "vjdbv0.3_privacy", "ena_submission_fieldtype", "ena_submission_requiredness"], "filename": "Submission"},
-    {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_name","vjdbv0.3_tags","vjdbv0.3_description",], "filename": "Fellow"},
+    {"sheet_name": "VJDBCore", "cols": ["vjdbv0.3_field_id",	"vjdbv0.3_name",	"vjdbv0.3_description", "vjdbv0.3_tags", "vjdbv0.3_privacy", "ena_submission_fieldtype", "ena_submission_requiredness", "ena_submission_validation"], "filename": "Submission"},
     ]
 
 
