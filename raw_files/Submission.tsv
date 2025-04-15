@@ -1,4 +1,4 @@
-vjdbv0.3_field_id	vjdbv0.3_name	vjdbv0.3_description	vjdbv0.3_privacy	vjdbv0.3_tags	ena_submission_requiredness	ena_submission_fieldtype	ena_submission_validation
+vjdbv0.3_field_id	vjdbv0.3_name	vjdbv0.3_description	vjdbv0.3_privacy	vjdbv0.3_tags	vjdb_submission_requiredness	ena_submission_fieldtype	ena_submission_validation
 insdc_accession_id	INSDC Accession ID	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	public	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"		text	unique
 assembly_accession_id	Assembly Accession ID	Assembly ID of the sequence (INSDC)	public	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Analysis"", ""VJDB Analysis"", ""Identifiers""]"		text	unique
 bioproject_accession_id	Bioproject Accession ID	References the BioProject Accession (ID) (INSDC)	public	"[""ENA"", ""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Study"", ""Identifiers""]"	mandatory	text	unique
@@ -20,14 +20,14 @@ sequence_length	Sequence Length	Length of the sequence	public	"[""NCBI Virus"", 
 molecule_type	Molecule Type	Molecule of the sequence, e.g. ssRNA	public	"[""ENA"", ""NCBI Virus"", ""Sample"", ""Virus""]"	optional	combo	controlled_vocabulary
 sequence_completeness	Sequence Completeness	Wether the sequence is a partial or complete sequence	public	"[""NCBI Virus"", ""Sample"", ""Sequence""]"		combo	controlled_vocabulary
 organism_name	Organism Name	Gen Bank organism name, a taxonomic name at species level or below the species level.	public	"[""NCBI Virus"", ""Sample"", ""Virus""]"		suggestion	freetext
-submitter_organization	Submitter Organization	Organization the submitter(s) is(are) affiliated with	public	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"		text	freetext
+submitter_organization	Submitter Organization	Organization the submitter(s) is(are) affiliated with	public	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"	mandatory	text	freetext
 				"[""NCBI Virus"", ""Organizational""]"			
 sequence_repository_release_date	Sequence Repository Release Date	Date when the sequence was released into a repository (GenBank, BV-BRC)	public	"[""RKI"", ""NCBI Virus"", ""Organizational""]"		date	freetext
 				"[""Analysis""]"			
 sequence_segment_name	Sequence Segment Name	Name of the virus segment	public	"[""NCBI Virus"", ""Sample"", ""Virus"", ""Sequence""]"		text	freetext
 sample_NCBI_scientific_name [sample_species_name_scientific]	Sample NCBI Scientific Name	NCBI Taxonomy scientific species name	public	"[""ENA"", ""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Virus"", ""NCBI Taxonomy""]"	mandatory	suggestion	unique
 sra_accession_id	SRA Accession ID	NCBI Sequence Read Archive (SRA) accession ID	public	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"		text	freetext
-submitter	Submitter	Submitter of the sequence	public	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"		text	freetext
+submitter	Submitter	Submitter of the sequence	public	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"	mandatory	text	freetext
 collection_source_host_tissue	Collection Source Host Tissue	Tissue that was selected from the host	public	"[""ENA"", ""RKI"", ""MIGS-VI"", ""NCBI Virus"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Collection""]"	recommended	combo	controlled_vocabulary
 collection_region	Collection Region	State/Region where the sample was collected 	public	"[""NCBI Virus"", ""Sample"", ""Collection""]"		combo	controlled_vocabulary
 analysis_accession_id	Analysis Accession ID	ENA analysis identifier	internal	"[""ENA"", ""Organizational"", ""ENA Analysis"", ""VJDB Analysis"", ""Identifiers""]"		text	unique
@@ -99,7 +99,7 @@ sequencing_library_strategy	Sequencing Library Strategy	The sequencing technique
 sequencing_platform	Sequencing Platform	Instrument platform used for sequencing, multiple are seperated (only for assemblys)	public	"[""ENA"", ""RKI"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Analysis"", ""ENA Experiment"", ""VJDB Experiment"", ""Sequencing""]"	mandatory	combo	controlled_vocabulary
 sequencing_reason	Sequencing Reason	Why was the sample sequenced?		"[""ENA"", ""RKI"", ""Analysis"", ""Sequencing""]"	recommended	combo	controlled_vocabulary
 source_metadata_db	Source Metadata DB	The name of the database where the sequence was originally released	public	"[""Organizational"", ""Source""]"		combo	controlled_vocabulary
-submitter_country	Submitter Country	Country of the submmiter institute	public	"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"		combo	controlled_vocabulary
+submitter_country	Submitter Country	Country of the submmiter institute	public	"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"	mandatory	combo	controlled_vocabulary
 submitter_region	Submitter Region	Country or location of the organization of the submitters.	public	"[""Sample"", ""Submission""]"		combo	controlled_vocabulary
 taxon_lineage_ids	Taxon Lineage IDs	BVBRC NCBI TaxIDs of the lineage	public	"[""BV-BRC"", ""Organizational"", ""Submission""]"		text	freetext
 virjen_id	VirJen ID	VirJenDB sequence ID	public	"[""Organizational"", ""Sequence""]"		text	freetext
@@ -139,7 +139,7 @@ sample_alias	Sample Alias	(Mandatory) (from sample metadata)	internal	"[""ENA ER
 sample_description	Sample Description	(Optional) Free-form text describing the sample, its origin, and its method of isolation.	internal	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Sample"", ""VJDB Sample""]"	optional	textarea	freetext
 source of vaccination information	Source of Vaccination Information	(Optional) Designation of information related to vaccination history as self reported or documented.	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	combo	controlled_vocabulary
 strain	Strain	(Optional) Name of the strain from which the sample was obtained.	internal	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
-study_abstract	Study Abstract	(Optional) Briefly describes the goals, purpose, and scope of the study.  this need not be listed if it can be inherited from a referenced publication.	internal	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Study"", ""VJDB Study""]"	optional	textarea	freetext
+study_abstract	Study Abstract	(Optional) Briefly describes the goals, purpose, and scope of the study.  this need not be listed if it can be inherited from a referenced publication.	internal	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Study"", ""VJDB Study""]"	mandatory	textarea	freetext
 study_alias	Study Alias	(Mandatory) Identifies the parent study. (from study metadata)	private	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Experiment"", ""VJDB Experiment""]"	mandatory	text	freetext
 study_type	Study Type	(Mandatory) The study_type presents a controlled vocabulary for expressing the overall purpose of the study.	private	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Study"", ""VJDB Study""]"	mandatory	combo	controlled_vocabulary
 subject exposure	Subject Exposure	(Optional) Exposure of the subject to infected human or animals, such as poultry, wild bird or swine. if multiple exposures are applicable, please state them separated by semicolon. example: poultry; wild bird	internal	"[""ENA ERC32"", ""ENA ERC33"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	unique
