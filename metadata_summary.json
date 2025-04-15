@@ -7,10 +7,12 @@
             "Organizational",
             "Identifiers",
             "ENA Analysis",
+            "VJDB Analysis",
             "ENA",
             "ENA Study",
             "MIGS-VI",
             "ENA Sample",
+            "VJDB Sample",
             "RKI",
             "ENA ERC32",
             "ENA ERC33",
@@ -20,14 +22,17 @@
             "NCBI Taxonomy",
             "Sequence",
             "Host",
+            "VJDB Study",
             "Submission",
             "Analysis",
             "Clinical",
             "ICTV Taxonomy",
             "ENA Experiment",
+            "VJDB Experiment",
             "Sequencing",
             "Source",
-            "ENA Run"
+            "ENA Run",
+            "VJDB Run"
         ],
         "tag_counts": {
             "NCBI Virus": 29,
@@ -35,10 +40,12 @@
             "Organizational": 23,
             "Identifiers": 11,
             "ENA Analysis": 7,
+            "VJDB Analysis": 7,
             "ENA": 55,
             "ENA Study": 6,
             "MIGS-VI": 23,
             "ENA Sample": 66,
+            "VJDB Sample": 66,
             "RKI": 10,
             "ENA ERC32": 86,
             "ENA ERC33": 63,
@@ -48,14 +55,17 @@
             "NCBI Taxonomy": 6,
             "Sequence": 25,
             "Host": 22,
+            "VJDB Study": 8,
             "Submission": 5,
             "Analysis": 23,
             "Clinical": 15,
             "ICTV Taxonomy": 1,
             "ENA Experiment": 14,
+            "VJDB Experiment": 14,
             "Sequencing": 11,
             "Source": 1,
-            "ENA Run": 4
+            "ENA Run": 4,
+            "VJDB Run": 4
         }
     }
 }
