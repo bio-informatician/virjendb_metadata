@@ -1,0 +1,35 @@
+name: Convert XLSX to JSON
+
+on:
+  push:
+    paths:
+      - metadata.xlsx
+      - xls2json.py
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Excel to JSON script
+        run: python xls2json.py
+
+      - name: Commit and push metadata.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add metadata.json
+          git commit -m "Auto-update JSON from Excel" || echo "No changes to commit"
+          git push
