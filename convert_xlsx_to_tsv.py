@@ -30,5 +30,14 @@ for wanted_file in WANTED_FILES:
         print("No such sheet: ", wanted_file.sheet_name)
         
 
+# ➕ Export full sheet as "VJDB_catalogue.tsv"
+if "VJDBCore" in xlsx.sheet_names:
+    full_df = pd.read_excel(xlsx, sheet_name="VJDBCore", skiprows=3)
+    full_tsv_path = os.path.join(OUTPUT_DIR, "VJDB_catalogue.tsv")
+    full_df.to_csv(full_tsv_path, sep="\t", index=False)
+    print("Full sheet saved as VJDB_catalogue.tsv")
+else:
+    print("No such sheet: VJDBCore")
+
 
 print("TSV files have been generated!")
