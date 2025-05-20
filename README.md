@@ -49,7 +49,8 @@ WANTED_FILES = [
 - `cols` - describes a list of the columns name the should be included in the newly generated tsv file.
 - `filename` - describes the name of the output file
 
-To create a new file add an dictionary containing the above information to the array of `WANTED_FILES`. An tsv files will be created for every element in the array. The output tsv files will be used by `create_output_files.py` to generated json, xml and csv files of it.
+To create a new file add an dictionary containing the above information to the array of `WANTED_FILES`. An tsv files will be created for every element in the array. The output tsv files will be used by `create_output_files.py` to generated json, xml and csv files of it.\
+Additionally one file with all columns will be created called `VJDB_catalogue`.
 
 - Note: The first three rows of the excel will be skipped `usecols=lambda x: x in wanted_file["cols"], skiprows=3)`
 
