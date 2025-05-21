@@ -3,24 +3,24 @@ insdc_accession_id	GenBank Accession ID = NCBI Accession, ENA, DDBJ (INSDC)	keyw
 assembly_accession_id	Assembly ID of the sequence (INSDC)	keyword	public	Assembly	Assembly Accession	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Analysis"", ""VJDB Analysis"", ""Identifiers""]"	NCBI Virus|BVBRC	unique
 bioproject_accession_id	References the BioProject Accession (ID) (INSDC)	keyword	public	BioProject	BioProject Accession	"[""ENA"", ""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Study"", ""Identifiers""]"	NCBI Virus|BVBRC	unique
 biosample_accession_id	References the BioSample Accession (ID) (INSDC)	keyword	public	BioSample	BioSample Accession	"[""ENA"", ""MIGS-VI"", ""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""ENA Sample"", ""VJDB Sample"", ""Identifiers""]"	NCBI Virus|BVBRC	unique
-collection_date	Date when the sample was collected	date	public	Collection_Date	Collection Date	"[""ENA"", ""RKI"", ""MIGS-VI"", ""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Collection""]"	NCBI Virus|BVBRC	freetext
+collection_date	Date when the sample was collected	date	public	Collection Date	Collection Date	"[""ENA"", ""RKI"", ""MIGS-VI"", ""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Collection""]"	NCBI Virus|BVBRC	freetext
 collection_country	Country or sea area where the sample was collected	keyword	public	Country	Isolation Country	"[""ENA"", ""MIGS-VI"", ""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample""]"	NCBI Virus|BVBRC	controlled_vocabulary
-sequence_title	Title name of the sequnce based on GenBank entry	keyword	internal	GenBank_Title		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	freetext
-is_genbank_sequence	This sequence is a GenBank sequence	boolean	public	GenBank_RefSeq		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	
-is_reference_sequence	This sequence is a reference sequence	boolean	public	GenBank_RefSeq	Reference	"[""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Sequence""]"	NCBI Virus|BVBRC	
-collection_city	City where the sample was collected	keyword	public	Geo_Location		"[""ENA"", ""NCBI Virus"", ""Sample""]"	NCBI Virus	freetext
-collection_geo_location	Name of the country may contain the state name	keyword	public	Geo_Location	Geographic Location	"[""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample""]"	NCBI Virus|BVBRC	freetext
+sequence_title	Title name of the sequnce based on GenBank entry	keyword	internal	GenBank Title		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	freetext
+is_genbank_sequence	This sequence is a GenBank sequence	boolean	public	GenBank RefSeq		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	
+is_reference_sequence	This sequence is a reference sequence	boolean	public	GenBank RefSeq	Reference	"[""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Sequence""]"	NCBI Virus|BVBRC	
+collection_city	City where the sample was collected	keyword	public	Geo Location		"[""ENA"", ""NCBI Virus"", ""Sample""]"	NCBI Virus	freetext
+collection_geo_location	Name of the country may contain the state name	keyword	public	Geo Location	Geographic Location	"[""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample""]"	NCBI Virus|BVBRC	freetext
 host_natural_common_name	Common name of the natural host, e.g. human	keyword	public	Host	Host Common Name	"[""ENA"", ""NCBI Virus"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Host""]"	NCBI Virus|BVBRC	freetext
 sequence_length	Length of the sequence	keyword	public	Length	Size	"[""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Sequence""]"	NCBI Virus|BVBRC	unique
-molecule_type	Molecule of the sequence, e.g. ssRNA	keyword	public	Molecule_type		"[""ENA"", ""NCBI Virus"", ""Sample"", ""Virus""]"	NCBI Virus	controlled_vocabulary
-sequence_completeness	Wether the sequence is a partial or complete sequence	keyword	public	Nuc_Completeness		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	controlled_vocabulary
-organism_name	Gen Bank organism name, a taxonomic name at species level or below the species level.	keyword	public	Organism_Name		"[""NCBI Virus"", ""Sample"", ""Virus""]"	NCBI Virus	freetext
+molecule_type	Molecule of the sequence, e.g. ssRNA	keyword	public	Molecule type		"[""ENA"", ""NCBI Virus"", ""Sample"", ""Virus""]"	NCBI Virus	controlled_vocabulary
+sequence_completeness	Wether the sequence is a partial or complete sequence	keyword	public	Nuc Completeness		"[""NCBI Virus"", ""Sample"", ""Sequence""]"	NCBI Virus	controlled_vocabulary
+organism_name	Gen Bank organism name, a taxonomic name at species level or below the species level.	keyword	public	Organism Name		"[""NCBI Virus"", ""Sample"", ""Virus""]"	NCBI Virus	freetext
 submitter_organization	Organization the submitter(s) is(are) affiliated with	keyword	public	Organization		"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"	NCBI Virus	freetext
-sequence_repository_release_date	Date when the sequence was released into a repository (GenBank, BV-BRC)	date	public	Release_Date		"[""RKI"", ""NCBI Virus"", ""Organizational""]"	NCBI Virus	freetext
+sequence_repository_release_date	Date when the sequence was released into a repository (GenBank, BV-BRC)	date	public	Release Date		"[""RKI"", ""NCBI Virus"", ""Organizational""]"	NCBI Virus	freetext
 sequence_segment_name	Name of the virus segment	keyword	public	Segment		"[""NCBI Virus"", ""Sample"", ""Virus"", ""Sequence""]"	NCBI Virus	freetext
-sra_accession_id	NCBI Sequence Read Archive (SRA) accession ID	keyword	public	SRA_Accession	SRA Accession	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"	NCBI Virus|BVBRC	freetext
+sra_accession_id	NCBI Sequence Read Archive (SRA) accession ID	keyword	public	SRA Accession	SRA Accession	"[""NCBI Virus"", ""BV-BRC"", ""Organizational"", ""Identifiers""]"	NCBI Virus|BVBRC	freetext
 submitter	Submitter of the sequence	keyword	public	Submitters		"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"	NCBI Virus	freetext
-collection_source_host_tissue	Tissue that was selected from the host	keyword	public	Tissue_Specimen_Source		"[""ENA"", ""RKI"", ""MIGS-VI"", ""NCBI Virus"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Collection""]"	NCBI Virus	controlled_vocabulary
+collection_source_host_tissue	Tissue that was selected from the host	keyword	public	Tissue Specimen Source		"[""ENA"", ""RKI"", ""MIGS-VI"", ""NCBI Virus"", ""ENA ERC32"", ""ENA ERC33"", ""Sample"", ""ENA Sample"", ""VJDB Sample"", ""Collection""]"	NCBI Virus	controlled_vocabulary
 ncbi_usa	State/Region where the sample was collected 	keyword	internal	USA		"[""NCBI Virus"", ""Sample"", ""Collection""]"	NCBI Virus	controlled_vocabulary
 analysis_accession_id	ENA analysis identifier	keyword	internal			"[""ENA"", ""Organizational"", ""ENA Analysis"", ""VJDB Analysis"", ""Identifiers""]"		unique
 assembly_level	Assembly level (contig, scaffold, chromosome, complete genome)	keyword	internal			"[""ENA"", ""Analysis"", ""ENA Analysis"", ""VJDB Analysis"", ""Sequence""]"		controlled_vocabulary
@@ -87,7 +87,7 @@ sequencing_library_strategy	The sequencing technique intended for this library.	
 sequencing_platform	Instrument platform used for sequencing, multiple are seperated (only for assemblys)		public		Sequencing Platform	"[""ENA"", ""RKI"", ""BV-BRC"", ""ENA ERC32"", ""ENA ERC33"", ""Analysis"", ""ENA Experiment"", ""VJDB Experiment"", ""Sequencing""]"	BVBRC	controlled_vocabulary
 sequencing_reason	Why was the sample sequenced?					"[""ENA"", ""RKI"", ""Analysis"", ""Sequencing""]"	no source	controlled_vocabulary
 source_metadata_db	The name of the database where the sequence was originally released		public			"[""Organizational"", ""Source""]"	calculated by VJDB	controlled_vocabulary
-submitter_country	Country of the submmiter institute		public	Org_location		"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"	NCBI Virus	controlled_vocabulary
+submitter_country	Country of the submmiter institute		public	Organization Country		"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"	NCBI Virus	controlled_vocabulary
 submitter_region	Country or location of the organization of the submitters.		public			"[""Sample"", ""Submission""]"	NCBI Virus	controlled_vocabulary
 virjen_id	VirJenDB sequence ID		public			"[""Organizational"", ""Sequence""]"	calculated by VJDB	freetext
 virus_id	Unique ID given by the investigator as strain might not be unique		internal			"[""ENA"", ""RKI"", ""ENA ERC32"", ""ENA ERC33"", ""Organizational"", ""ENA Sample"", ""VJDB Sample"", ""Virus""]"		unique
