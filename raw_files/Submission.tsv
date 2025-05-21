@@ -130,10 +130,10 @@ vaccine dosage	Vaccine Dosage	(Optional) Dosage of the vaccine taken by the subj
 vaccine lot number	Vaccine Lot Number	(Optional) Lot number of the vaccine.	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
 vaccine manufacturer	Vaccine Manufacturer	(Optional) Manufacturer of the vaccine.	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
 WHO/OIE/FAO clade (required for HPAI H5N1 viruses)	WHO/OIE/FAO Clade (Required for HPAI H5N1 Viruses)	(Optional) Who/oie/fao clade should be included for highly pathogenic h5n1 viruses. example: 2.2	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
-virus_old_names			internal	[]			
-sequence_byte_range			internal	[]			
-sequence_path			internal	[]			
-insertion_date			internal	[]			
+virus_old_names		Old Virus name(s)	internal	[]			
+sequence_byte_range		Byte range data of the sample in the sequence file without the header	internal	[]			
+sequence_path		The file location of the multiseq fasta file including the parent folder name 	internal	[]			
+insertion_date		Date of the insertion into the VirJen database	internal	[]			
 ictv_realm	ICTV Realm	A 'Realm' is the highest taxonomic rank into which virus species can be classified. Defined by the ICTV.	public	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
 ictv_subrealm	ICTV Subrealm	A 'Subrealm' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	internal	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
 ictv_kingdom	ICTV Kindgom	A 'Kingdom' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	public	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
