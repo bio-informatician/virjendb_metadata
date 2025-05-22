@@ -23,6 +23,13 @@ For working within the file please stick to the following guidelines:
 - `Row 4` - **DONT CHANGE THIS ROW** - Contains the real name of the column. This field is created by formulas using `Row 3`. When a new columns is created drag the formula from the previous columns to populate the field.
 - `vjdbv0.3_tags` - **DONT CHANGE THIS COLUMN** - This column constructs the tags for a metadata field from other columns (H - U). For columns H - P it inserts the naming of `Row 1` if the cell of the columns is filled, for the other columns is inserts the value of the field if there is one in the column. For new rows the formula is to be extended. Should a new tag be introduced by a new column the formula needs to be adjusted.
 
+### **Important Notice on vjdbv0.3_field_index Column**
+- The `vjdbv0.3_field_index` column must remain unchanged and persist across all updates.
+- When adding new records, always append them to the end of the dataset. Do not insert rows between existing records.
+- Avoid deleting any rows from this index. Instead, if a record is no longer in use, tag it as "not used" in `vjdbv0.3_fields_type` rather than removing it.
+- Deleting rows can disrupt the automated processes relying on this index, causing new fields to fail to map correctly.
+- Cleanup or reorganization of this index should be done manually and carefully, not through automated procedures.
+
 ## Metadata Update Process
 
 - create a new branch
