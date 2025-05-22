@@ -14,6 +14,7 @@ host_natural_common_name	Host Common Name	"[""ENA"", ""NCBI Virus"", ""BV-BRC"",
 sequence_length	Sequence Length	"[""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Sequence""]"
 molecule_type	Molecule Type	"[""ENA"", ""NCBI Virus"", ""Sample"", ""Virus""]"
 sequence_completeness	Genome Completeness	"[""NCBI Virus"", ""Sample"", ""Sequence""]"
+sequence_completeness_percentage	Genome Completeness Percentage	"[""Sample"", ""Sequence""]"
 organism_name	Organism Name	"[""NCBI Virus"", ""Sample"", ""Virus""]"
 submitter_organization	Submitter Organization	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"
 sequence_repository_release_date	Release Date	"[""RKI"", ""NCBI Virus"", ""Organizational""]"
@@ -90,6 +91,7 @@ source_metadata_db	Source Metadata DB	"[""Organizational"", ""Source""]"
 submitter_country	Submitter Country	"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"
 submitter_region	Submitter Region	"[""Sample"", ""Submission""]"
 virjen_id	VirJenDB Accession	"[""Organizational"", ""Sequence""]"
+virjen_version	VirJenDB Version	"[""Organizational"", ""Sequence""]"
 virus_id	Virus ID	"[""ENA"", ""RKI"", ""ENA ERC32"", ""ENA ERC33"", ""Organizational"", ""ENA Sample"", ""VJDB Sample"", ""Virus""]"
 antiviral_treatment	Antiviral Treatment	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"
 antiviral_treatment_dosage	Antiviral Treatment Dosage	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"
@@ -134,6 +136,7 @@ virus_old_names	Virus Old Names	[]
 sequence_byte_range	Sequence Byte Range	[]
 sequence_path	Sequence Path	[]
 insertion_date	Insertion Date	[]
+update_date	Update Date	[]
 ictv_realm	ICTV Realm	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"
 ictv_subrealm	ICTV Subrealm	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"
 ictv_kingdom	ICTV Kindgom	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"

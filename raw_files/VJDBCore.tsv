@@ -11,9 +11,10 @@ is_reference_sequence	Reference Sequence	This sequence is a reference sequence	b
 collection_city	City	City where the sample was collected	keyword	public
 collection_geo_location	Collection Geo Location	Name of the country may contain the state name	keyword	public
 host_natural_common_name	Host Common Name	Common name of the natural host, e.g. human	keyword	public
-sequence_length	Sequence Length	Length of the sequence	keyword	public
+sequence_length	Sequence Length	Length of the sequence	integer	public
 molecule_type	Molecule Type	Molecule of the sequence, e.g. ssRNA	keyword	public
 sequence_completeness	Genome Completeness	Wether the sequence is a partial or complete sequence	keyword	public
+sequence_completeness_percentage	Genome Completeness Percentage	The level of the sequence completeness compare to the representative sequence in refseq in percentage	float	internal
 organism_name	Organism Name	Gen Bank organism name, a taxonomic name at species level or below the species level.	keyword	public
 submitter_organization	Submitter Organization	Organization the submitter(s) is(are) affiliated with	keyword	public
 sequence_repository_release_date	Release Date	Date when the sequence was released into a repository (GenBank, BV-BRC)	date	public
@@ -89,7 +90,8 @@ sequencing_reason	Sequencing Reason	Why was the sample sequenced?	keyword
 source_metadata_db	Source Metadata DB	The name of the database where the sequence was originally released	keyword	public
 submitter_country	Submitter Country	Country of the submmiter institute	keyword	public
 submitter_region	Submitter Region	Country or location of the organization of the submitters.	keyword	public
-virjen_id	VirJenDB Accession	VirJenDB sequence ID	keyword	public
+virjen_id	VirJenDB Accession	VirJenDB sequence ID	integer	public
+virjen_version	VirJenDB Version	VirJenDB metadata version	integer	public
 virus_id	Virus ID	Unique ID given by the investigator as strain might not be unique		internal
 antiviral_treatment	Antiviral Treatment	(Optional) Antiviral treatment used for this subject, such as zanamavir oseltamivir, amantadine. example: rimantadine	keyword	internal
 antiviral_treatment_dosage	Antiviral Treatment Dosage	(Optional) Dosage of the treatment taken by the subject. example: 0.05 mg	keyword	internal
@@ -134,6 +136,7 @@ virus_old_names	Virus Old Names	Old Virus name(s)	keyword	internal
 sequence_byte_range	Sequence Byte Range	Byte range data of the sample in the sequence file without the header	integer list	internal
 sequence_path	Sequence Path	The file location of the multiseq fasta file including the parent folder name 	keyword	internal
 insertion_date	Insertion Date	Date of the insertion into the VirJen database	date	internal
+update_date	Update Date	Date of the update metadata in the VirJen database	date	internal
 ictv_realm	ICTV Realm	A 'Realm' is the highest taxonomic rank into which virus species can be classified. Defined by the ICTV.	keyword	public
 ictv_subrealm	ICTV Subrealm	A 'Subrealm' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	keyword	internal
 ictv_kingdom	ICTV Kindgom	A 'Kingdom' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	keyword	public

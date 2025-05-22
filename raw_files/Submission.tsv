@@ -14,6 +14,7 @@ host_natural_common_name	Host Common Name	Common name of the natural host, e.g. 
 sequence_length	Sequence Length	Length of the sequence	public	"[""NCBI Virus"", ""BV-BRC"", ""Sample"", ""Sequence""]"		text	unique
 molecule_type	Molecule Type	Molecule of the sequence, e.g. ssRNA	public	"[""ENA"", ""NCBI Virus"", ""Sample"", ""Virus""]"	optional	combo	controlled_vocabulary
 sequence_completeness	Genome Completeness	Wether the sequence is a partial or complete sequence	public	"[""NCBI Virus"", ""Sample"", ""Sequence""]"		combo	controlled_vocabulary
+sequence_completeness_percentage	Genome Completeness Percentage	The level of the sequence completeness compare to the representative sequence in refseq in percentage	internal	"[""Sample"", ""Sequence""]"			
 organism_name	Organism Name	Gen Bank organism name, a taxonomic name at species level or below the species level.	public	"[""NCBI Virus"", ""Sample"", ""Virus""]"		suggestion	freetext
 submitter_organization	Submitter Organization	Organization the submitter(s) is(are) affiliated with	public	"[""NCBI Virus"", ""Organizational"", ""VJDB Study"", ""Submission""]"	mandatory	text	freetext
 sequence_repository_release_date	Release Date	Date when the sequence was released into a repository (GenBank, BV-BRC)	public	"[""RKI"", ""NCBI Virus"", ""Organizational""]"		date	freetext
@@ -90,6 +91,7 @@ source_metadata_db	Source Metadata DB	The name of the database where the sequenc
 submitter_country	Submitter Country	Country of the submmiter institute	public	"[""NCBI Virus"", ""Sample"", ""VJDB Study"", ""Submission""]"	mandatory	combo	controlled_vocabulary
 submitter_region	Submitter Region	Country or location of the organization of the submitters.	public	"[""Sample"", ""Submission""]"		combo	controlled_vocabulary
 virjen_id	VirJenDB Accession	VirJenDB sequence ID	public	"[""Organizational"", ""Sequence""]"		text	freetext
+virjen_version	VirJenDB Version	VirJenDB metadata version	public	"[""Organizational"", ""Sequence""]"		text	freetext
 virus_id	Virus ID	Unique ID given by the investigator as strain might not be unique	internal	"[""ENA"", ""RKI"", ""ENA ERC32"", ""ENA ERC33"", ""Organizational"", ""ENA Sample"", ""VJDB Sample"", ""Virus""]"	recommended	text	unique
 antiviral_treatment	Antiviral Treatment	(Optional) Antiviral treatment used for this subject, such as zanamavir oseltamivir, amantadine. example: rimantadine	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
 antiviral_treatment_dosage	Antiviral Treatment Dosage	(Optional) Dosage of the treatment taken by the subject. example: 0.05 mg	internal	"[""ENA ERC32"", ""ENA Sample"", ""VJDB Sample""]"	optional	text	freetext
@@ -134,6 +136,7 @@ virus_old_names	Virus Old Names	Old Virus name(s)	internal	[]
 sequence_byte_range	Sequence Byte Range	Byte range data of the sample in the sequence file without the header	internal	[]			
 sequence_path	Sequence Path	The file location of the multiseq fasta file including the parent folder name 	internal	[]			
 insertion_date	Insertion Date	Date of the insertion into the VirJen database	internal	[]			
+update_date	Update Date	Date of the update metadata in the VirJen database	internal	[]			
 ictv_realm	ICTV Realm	A 'Realm' is the highest taxonomic rank into which virus species can be classified. Defined by the ICTV.	public	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
 ictv_subrealm	ICTV Subrealm	A 'Subrealm' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	internal	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
 ictv_kingdom	ICTV Kindgom	A 'Kingdom' is a rank in the taxonomic hierarchy into which virus species can be classified. Defined by the ICTV.	public	"[""Sample"", ""Virus"", ""ICTV Taxonomy""]"			
